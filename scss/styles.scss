@@ -1,0 +1,90 @@
+@import "variables";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap");
+body {
+    background: $very-dark-blue;
+    font-family: "Inter", sans-serif;
+}
+
+.center-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    display: flex;
+    margin: 30px;
+    max-height: 500px;
+    max-width: 800px;
+    background: $dark-desaturated-blue;
+    flex-direction: row-reverse;
+    justify-content: start;
+    border-radius: 8px;
+}
+
+.image-container {
+    img {
+        height: 100%;
+        width: 100%;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+}
+
+.card-body {
+    max-width: 500px;
+    height: fit-content;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    h2,
+    h3 {
+        color: white;
+    }
+    #highlight {
+        color: $soft-violet;
+    }
+    p {
+        color: $slightly-transparent-white;
+        font-size: $font-size;
+    }
+    .stats {
+        display: flex;
+        #stats-container {
+            padding: 20px;
+            text-align: start;
+        }
+        p {
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        display: flex;
+        max-height: fit-content;
+        background: $dark-desaturated-blue;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .image-container img {
+        border-top-left-radius: 8px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .card-body {
+        padding: 0;
+        .stats {
+            display: flex;
+            flex-direction: column;
+            #stats-container {
+                text-align: center;
+            }
+        }
+    }
+}
